@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Little Shop Glitch</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    body {
+      margin: 0;
+      background: #000;
+      font-family: 'Press Start 2P', cursive;
+      color: #fff;
+      text-align: center;
+    }
+
+    canvas {
+      display: block;
+      margin: 0 auto;
+      border: 3px solid #0f0;
+    }
+
+    .touch-controls {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .touch-button {
+      font-family: 'Press Start 2P', cursive;
+      background: #0f0;
+      color: #000;
+      border: none;
+      padding: 10px;
+      margin: 5px;
+      font-size: 14px;
+    }
+
+    .touch-button:active {
+      background: #fff;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+</head>
+<body>
+  <h1>🌱 Little Shop Glitch 🌱</h1>
+  <canvas id="defaultCanvas0"></canvas>
+
+  <!-- Mobile Controls -->
+  <div class="touch-controls">
+    <button class="touch-button" onclick="handleTouch('tap')">TAP</button>
+  </div>
+
+  <script>
+    function handleTouch(type) {
+      if (type === 'tap') {
+        window.mousePressed();
+      }
+    }
+  </script>
+
+  <script src="game.js"></script>
+</body>
+</html>
